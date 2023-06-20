@@ -1,0 +1,32 @@
+.current-weather {
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid #d4d4d4;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .city-info {
+    margin-right: 20px;
+  }
+  
+  .weather-info {
+    flex-grow: 1;
+  }
+  
+  .temperature {
+    font-size: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  .extra-info {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .current-weather-item {
+    width: 120px;
+  }
