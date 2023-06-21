@@ -1,60 +1,54 @@
 <template>
-  <div id="app">
+  <div id="app" :class="backgroundColorClass">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="#">
-          Weather
+          Weather App
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <router-link to="/" class="nav-link">The weather of my city</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/weather-input" class="nav-link">View the weather for another city</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/monthly-weather" class="nav-link">The weather forecast</router-link>
+              <div class="d-flex">
+                <input type="text" v-model="searchInput" class="form-control" placeholder="Введите город">
+                <button class="btn btn-primary ml-2" @click="searchWeather">Поиск</button>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <router-view></router-view>
+    <WeatherDisplay v-if="selectedCity" :selectedCity="selectedCity" />
   </div>
 </template>
 
 <script>
+import WeatherDisplay from './components/WeatherDisplay.vue';
+import CityList from './components/CityList.vue';
+
 export default {
-  name: 'App',
+  components: {
+    WeatherDisplay,
+    CityList,
+  },
+  data() {
+    return {
+      backgroundColorClass: 'my-custom-navbar',
+      searchInput: '',
+      selectedCity: '',
+    };
+  },
+  methods: {
+    searchWeather() {
+      this.selectedCity = this.searchInput;
+    },
+  },
 };
 </script>
 
 <style>
-#app {
-  text-align: center;
-  padding: 20px;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-}
-
-.navbar-brand svg {
-  margin-right: 5px;
-}
-
-.nav-link {
-  font-size: 18px;
-}
-
-.my-custom-navbar {
-  background-color: #bbb128;
-  color: #5e3335;
-}
+@import url('../src/css/Base.css');
 </style>

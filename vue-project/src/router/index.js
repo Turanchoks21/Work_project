@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import WeatherInput from '../components/WeatherInput.vue';
 import WeatherDisplay from '../components/WeatherDisplay.vue';
 
 const router = createRouter({
@@ -9,11 +8,6 @@ const router = createRouter({
       path: '/',
       name: 'WeatherDisplay',
       component: WeatherDisplay,
-    },
-    {
-      path: '/weather-input',
-      name: 'WeatherInput',
-      component: WeatherInput,
     },
   ]
 })

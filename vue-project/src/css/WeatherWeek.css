@@ -1,54 +1,35 @@
-.weather-days {
+.weather-table-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
   
-  .weather-day {
-    margin: 10px 0;
-    width: 100%;
+  .weather-table {
+    display: table;
+    width: 45%;
+    border-collapse: collapse;
   }
   
-  .weather-items {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  .weather-row {
+    display: table-row;
   }
   
-  .weather-item {
-    margin: 5px;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    text-align: center;
-    width: calc(50% - 20px);
-    max-width: 200px;
+  .weather-cell {
+    display: table-cell;
+    padding: 4px;
+    border-bottom: 1px solid #ffffff;
   }
   
-  .weather-item h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  .header {
+    background-color: #d6f5e0cc;
+    font-weight: bold;
   }
   
-  .weather-item p {
-    font-size: 16px;
-    margin-bottom: 5px;
+  .weather-cell:nth-child(1),
+  .weather-cell:nth-child(2) {
+    width: 15%;
   }
   
-  .weather-chart {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 150px;
-  }
-  
-  .weather-chart-bar {
-    width: 20px;
-    background-color: #6495ED;
-    transition: height 0.3s ease-in-out;
-  }
-  
-  .weather-chart-label {
-    font-size: 12px;
-    margin-top: 5px;
+  .weather-cell:nth-child(3),
+  .weather-cell:nth-child(4) {
+    width: 35%;
   }
