@@ -1,35 +1,57 @@
 .weather-table-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-row {
+  display: table-row;
+}
+
+.weather-cell {
+  display: table-cell;
+  padding: 4px;
+  border-bottom: 2px solid #3579c78e;
+  background-color: #3579c769;
+}
+
+.header {
+  background-color: #3579c78e;
+  font-weight: bold;
+}
+
+.weather-cell:nth-child(1),
+.weather-cell:nth-child(2) {
+  width: 15%;
+}
+
+.weather-cell:nth-child(3),
+.weather-cell:nth-child(4) {
+  width: 35%;
+}
+
+@media (min-width: 375px) {
   .weather-table {
     display: table;
-    width: 45%;
+    width: full;
     border-collapse: collapse;
+    font-size: 4vw;
   }
-  
-  .weather-row {
-    display: table-row;
+}
+
+@media (min-width: 450px) {
+  .weather-table {
+    display: table;
+    width: full;
+    border-collapse: collapse;
+    font-size: 3vw;
   }
-  
-  .weather-cell {
-    display: table-cell;
-    padding: 4px;
-    border-bottom: 1px solid #ffffff;
+}
+
+@media (min-width: 650px) {
+  .weather-table {
+    display: table;
+    width: full;
+    border-collapse: collapse;
+    font-size: 25px;
   }
-  
-  .header {
-    background-color: #d6f5e0cc;
-    font-weight: bold;
-  }
-  
-  .weather-cell:nth-child(1),
-  .weather-cell:nth-child(2) {
-    width: 15%;
-  }
-  
-  .weather-cell:nth-child(3),
-  .weather-cell:nth-child(4) {
-    width: 35%;
-  }
+}

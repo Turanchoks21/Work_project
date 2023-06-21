@@ -1,23 +1,32 @@
 #app {
-    text-align: center;
-    padding: 20px;
-    background-color: #e7e681;
-  }
-  
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-  }
-  
-  .navbar-brand svg {
-    margin-right: 6px;
-  }
-  
-  .nav-link {
-    font-size: 15px;
-  }
-  
-  .my-custom-navbar {
-    color: #0c0a0a;
-  }
+  text-align: center;
+  padding: 20px;
+  background-color: #a2d0eb;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navbar-brand svg {
+  margin-right: 6px;
+}
+
+.nav-link {
+  font-size: 15px;
+}
+
+.my-custom-navbar {
+  color: #000000;
+}
+
+.title-style {
+  margin-top: 30px;
+  margin-bottom: 45px;
+  padding: 4px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border-radius: 16px;
+}

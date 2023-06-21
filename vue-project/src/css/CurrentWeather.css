@@ -1,16 +1,30 @@
 .current-weather {
-    margin-bottom: 10px;
-    text-align: left;
-    margin-left: 5px;
-  }
-  
-  .weather-info {
-    font-size: 12px;
-    margin-left: 5px;
-  }
-  
+  margin-bottom: 10px;
+
+  /* background-color: wheat; */
+}
+
+.info-style {
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border-radius: 16px;
+}
+
+.extra-backgroud {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #3579c78e;
+}
+
+@media (min-width: 1024px) {
   .extra-info {
-    font-size: 12px;
-    margin-left: 5px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
-  
+  .weather-backgroud {
+    display: flex;
+  }
+}
